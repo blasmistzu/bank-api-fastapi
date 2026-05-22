@@ -1,15 +1,14 @@
 from pydantic import BaseModel
 
-
+# 🔹 USER
 class User(BaseModel):
     id: int
     name: str
     email: str
 
 
-class Task(BaseModel):
+# 🔹 ACCOUNT
+class Account(BaseModel):
     id: int
-    title: str
-    description: str
     user_id: int
-    status: str
+    balance: float
